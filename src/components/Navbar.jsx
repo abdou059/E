@@ -2,15 +2,15 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const content = styled.div({
+const Content = styled.div({
   color:'red',
 });
 
 export default function Navbar() {
   return (
           
-    <content>
+    <Content>
       Navbar
-    </content>
+    </Content>
   )
 }
