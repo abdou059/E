@@ -4,25 +4,25 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 
-const Container = styled.div({
-  display:'flex',
-  padding:'10px 25px'
-})
-const Lift = styled.div({
-  flex:'1',
-  display: 'flex',
-  flexDirection: 'column',
-  padding: '20px',
-})
-const Logo = styled.h1({
+const Container = styled.div`
+display:flex;
+padding:25px;
+`
 
-})
-const Decryption = styled.div({
-  margin:'20px 0'
-})
-const SocialContainer = styled.div({
-  display:'flex',
-})
+const Lift = styled.div`
+flex:1;
+display:flex;
+flex-direction:column;
+padding:20px;
+`
+const Logo = styled.h1``
+
+const Decryption = styled.div`
+margin:20px;
+`
+const SocialContainer = styled.div`
+display:flex;
+`
 const SocialIcon= styled.div`
   width: 40px;
   height: 40px;
