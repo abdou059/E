@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components';
 import { Badge } from '@mui/material';
-import { ShoppingCartOutlined ,Search } from '@mui/icons-material';
-import { display } from '@mui/system';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SearchIcon from '@mui/icons-material/Search';
 const Content = styled.div({
 });
 const Wrapper = styled.div({
@@ -57,10 +55,11 @@ export default function Navbar() {
           <Language>EN </Language>
           <SearchContainer>
             <Input/>
-            <Search style={{
+            <SearchIcon style={{
               color:'gray',
-              fontSize:'14px'
-            }} />
+              fontSize:'14px',
+            }}
+              />
           </SearchContainer>
         </Left>
         <Center><Logo>Abdou Stor</Logo></Center>
@@ -69,7 +68,7 @@ export default function Navbar() {
           <MailItem>SIGN IN</MailItem>
           <MailItem>
           <Badge badgeContent={4} color="primary">
-          <ShoppingCartOutlined />
+          <ShoppingCartIcon />
           </Badge>
           </MailItem>
         </Right>
