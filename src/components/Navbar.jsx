@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
-
 const Content = styled.div({
 });
 const Wrapper = styled.div({
@@ -59,7 +58,8 @@ export default function Navbar() {
             <SearchIcon style={{
               color:'gray',
               fontSize:'14px',
-            }} />
+            }}
+              />
           </SearchContainer>
         </Left>
         <Center><Logo>Abdou Stor</Logo></Center>
