@@ -1,23 +1,23 @@
-import styled from 'styled-components';
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-const Info = styled.div({
-  opacity:'0',
-  width:'100%',
-  height:'100%',
-  backgroundColor:'rgba(0,0,0,0.2)',
-  position:'absolute',
-  top:'0',
-  button:'0',
-  display:'flex',
-  justifyContent:'center',
-  alignItems:'center',
-  flexDirection: 'column',
-  zIndex:'3',
-  transition: 'all 0.5s ease-out',
-  cursor:'pointer',
-})
+import styled from "styled-components";
+
+const Info = styled.div`
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+`;
 
 const Container = styled.div`
   flex: 1;
@@ -33,10 +33,7 @@ const Container = styled.div`
     opacity: 1;
   }
 `;
-const Image = styled.div({
-  // height:'70vh',
-  zIndex:'2',
-})
+
 const Circle = styled.div`
   width: 200px;
   height: 200px;
@@ -45,13 +42,11 @@ const Circle = styled.div`
   position: absolute;
 `;
 
-const Icons = styled.div({
-  width:'100%',
-  height:'100vh',
-  display:'flex',
-  justifyContent:'center',
-  alignItems:'center',
-})
+const Image = styled.img`
+  height: 75%;
+  z-index: 2;
+`;
+
 const Icon = styled.div`
   width: 40px;
   height: 40px;
@@ -67,36 +62,25 @@ const Icon = styled.div`
     transform: scale(1.1);
   }
 `;
-const Product = ({item}) => {
+
+const Product = ({ item }) => {
   return (
     <Container>
-      <Circle/>
-        <Image>
-          <img
-              className="imgNotFound"
-              src={item.img}
-              alt="Not Found"
-              style={{
-                width:'100%',
-                height:'200px'
-              }}
-            />
-          </Image>
+      <Circle />
+      <Image src={item.img} />
       <Info>
-          <Icons>
-            <Icon>
-              <ShoppingCartCheckoutIcon/>
-            </Icon>
-            <Icon>  
-              <SearchIcon/>
-            </Icon>
-            <Icon>
-              <FavoriteBorderIcon/>
-            </Icon>
-            </Icons>
+        <Icon>
+          <ShoppingCartIcon />
+        </Icon>
+        <Icon>
+          <SearchIcon />
+        </Icon>
+        <Icon>
+          <FavoriteBorderIcon />
+        </Icon>
       </Info>
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

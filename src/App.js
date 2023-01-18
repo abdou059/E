@@ -1,10 +1,18 @@
-// import './App.css';
-import Home from "./page/Home";
-
+// import Home from "./page/Home";
+// import Product from "./page/product";
+// import ProductList from "./page/ProductList";
+// import Login from './page/Login'
+// import Register from './page/Register';
+import Cart from "./page/Cart";
 function App() {
   return (
     <div>   
-      <Home/>
+      {/* <Home/> */}
+      {/* <Product/> */}
+      {/* <ProductList/> */}
+      {/* <Login/> */}
+      {/* <Register/> */}
+      <Cart/>
     </div>
   );
 }
